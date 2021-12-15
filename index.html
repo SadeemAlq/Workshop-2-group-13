@@ -1,17 +1,54 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Your front-end</title>
+
+<style >
+#container
+{
+  text-align: center;
+}
+#container2
+{
+  text-align: center;
+
+}
+#con{
+  text-align: center;
+}
+</style>
+
 </head>
 
 <body>
-<form action="/fasttext">
-	Enter your text to be classified<br>
-	<input type="text" name="statement">
-	<input type="submit" value="Submit">
-</form> 
+<div id="con">
+  <p><h1>My Fridge!</h1></p> 
+  <img src=”https://d.top4top.io/p_2174rs6wp1.jpg”>
+</div>
 
+
+
+ <div id = "container2">
+  <form action="/fasttext" id="rr">
+   
+
+  Enter your text to be classified<br>
+  
+ <input type="text"style="font-size: 18pt; height: 80px; width:280px " name="statement">
+ <div id ="container">
+ <input type="submit" value="Submit">
+    <button type="Reset" name="Reset">Reset</button>
+  </div>
+  <label for="output"style="height: 80px; width:280px "> </label><input type="output">
+  <script>
+  console.log(statementValue.value);
+  fetch( 'http://localhost:8000/fasttext/?statement=' + statementValue.value)
+    .then(response => response.json())
+    </script>
+</div>
+</form>
+</form>
 </body>
 
-</html> 
+</html>
